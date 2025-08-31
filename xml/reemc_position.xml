@@ -1,0 +1,77 @@
+<mujoco model="reemc">
+
+  <include file="reemc.xml"/>
+
+  <actuator>
+    <position name="leg_right_1_joint_position" joint="leg_right_1_joint" kp="1000" forcerange="-127 127" ctrlrange="-0.524 0.785"/>
+    <position name="leg_right_2_joint_position" joint="leg_right_2_joint" kp="1000" forcerange="-76 76" ctrlrange="-0.524 0.262"/>
+    <position name="leg_right_3_joint_position" joint="leg_right_3_joint" kp="1000" forcerange="-127 127" ctrlrange="-1.745 0.785"/>
+    <position name="leg_right_4_joint_position" joint="leg_right_4_joint" kp="1000" forcerange="-284 284" ctrlrange="0 2.618"/>
+    <position name="leg_right_5_joint_position" joint="leg_right_5_joint" kp="1000" forcerange="-147 147" ctrlrange="-1.309 0.785"/>
+    <position name="leg_right_6_joint_position" joint="leg_right_6_joint" kp="1000" forcerange="-76 76" ctrlrange="-0.262 0.524"/>
+    <position name="leg_left_1_joint_position" joint="leg_left_1_joint" kp="1000" forcerange="-127 127" ctrlrange="-0.785 0.524"/>
+    <position name="leg_left_2_joint_position" joint="leg_left_2_joint" kp="1000" forcerange="-76 76" ctrlrange="-0.262 0.524"/>
+    <position name="leg_left_3_joint_position" joint="leg_left_3_joint" kp="1000" forcerange="-127 127" ctrlrange="-1.745 0.785"/>
+    <position name="leg_left_4_joint_position" joint="leg_left_4_joint" kp="1000" forcerange="-284 284" ctrlrange="0 2.618"/>
+    <position name="leg_left_5_joint_position" joint="leg_left_5_joint" kp="1000" forcerange="-147 147" ctrlrange="-1.309 0.785"/>
+    <position name="leg_left_6_joint_position" joint="leg_left_6_joint" kp="1000" forcerange="-76 76" ctrlrange="-0.524 0.262"/>
+    <position name="torso_1_joint_position" joint="torso_1_joint" kp="2000" forcerange="-108 108" ctrlrange="-1.309 1.309"/>
+    <position name="torso_2_joint_position" joint="torso_2_joint" kp="2000" forcerange="-108 108" ctrlrange="-0.262 0.785"/>
+    <position name="head_1_joint_position" joint="head_1_joint" kp="100" forcerange="-4 4" ctrlrange="-1.309 1.309"/>
+    <position name="head_2_joint_position" joint="head_2_joint" kp="100" forcerange="-4 4" ctrlrange="-0.262 0.785"/>
+    <position name="arm_right_1_joint_position" joint="arm_right_1_joint" kp="100" forcerange="-54 54" ctrlrange="-0.785 3.142"/>
+    <position name="arm_right_2_joint_position" joint="arm_right_2_joint" kp="100" forcerange="-54 54" ctrlrange="-0.262 2.094"/>
+    <position name="arm_right_3_joint_position" joint="arm_right_3_joint" kp="100" forcerange="-54 54" ctrlrange="-2.356 2.749"/>
+    <position name="arm_right_4_joint_position" joint="arm_right_4_joint" kp="100" forcerange="-54 54" ctrlrange="0 2.269"/>
+    <position name="arm_right_5_joint_position" joint="arm_right_5_joint" kp="100" forcerange="-3.5 3.5" ctrlrange="-2.094 2.094"/>
+    <position name="arm_right_6_joint_position" joint="arm_right_6_joint" kp="100" forcerange="-7 7" ctrlrange="-1.414 1.414"/>
+    <position name="arm_right_7_joint_position" joint="arm_right_7_joint" kp="100" forcerange="-7 7" ctrlrange="-2.094 2.094"/>
+    <position name="arm_left_1_joint_position" joint="arm_left_1_joint" kp="100" forcerange="-54 54" ctrlrange="-0.785 3.142"/>
+    <position name="arm_left_2_joint_position" joint="arm_left_2_joint" kp="100" forcerange="-54 54" ctrlrange="-0.262 2.094"/>
+    <position name="arm_left_3_joint_position" joint="arm_left_3_joint" kp="100" forcerange="-54 54" ctrlrange="-2.356 2.749"/>
+    <position name="arm_left_4_joint_position" joint="arm_left_4_joint" kp="100" forcerange="-54 54" ctrlrange="0 2.269"/>
+    <position name="arm_left_5_joint_position" joint="arm_left_5_joint" kp="100" forcerange="-3.5 3.5" ctrlrange="-2.094 2.094"/>
+    <position name="arm_left_6_joint_position" joint="arm_left_6_joint" kp="100" forcerange="-7 7" ctrlrange="-1.414 1.414"/>
+    <position name="arm_left_7_joint_position" joint="arm_left_7_joint" kp="100" forcerange="-7 7" ctrlrange="-2.094 2.094"/>
+  </actuator>
+
+</mujoco>
+
+<!-- <actuator>
+    <!-- right leg -->
+    <motor name="leg_right_1_motor" joint="leg_right_1_joint" class="reemc" />
+    <motor name="leg_right_2_motor" joint="leg_right_2_joint" class="reemc" />
+    <motor name="leg_right_3_motor" joint="leg_right_3_joint" class="reemc" />
+    <motor name="leg_right_4_motor" joint="leg_right_4_joint" class="reemc" />
+    <motor name="leg_right_5_motor" joint="leg_right_5_joint" class="reemc" />
+    <motor name="leg_right_6_motor" joint="leg_right_6_joint" class="reemc" />
+    <!-- left leg -->
+    <motor name="leg_left_1_motor" joint="leg_left_1_joint" class="reemc" />
+    <motor name="leg_left_2_motor" joint="leg_left_2_joint" class="reemc" />
+    <motor name="leg_left_3_motor" joint="leg_left_3_joint" class="reemc" />
+    <motor name="leg_left_4_motor" joint="leg_left_4_joint" class="reemc" />
+    <motor name="leg_left_5_motor" joint="leg_left_5_joint" class="reemc" />
+    <motor name="leg_left_6_motor" joint="leg_left_6_joint" class="reemc" />
+    <!-- waist -->
+    <motor name="torso_1_motor" joint="torso_1_joint" class="reemc" />
+    <motor name="torso_2_motor" joint="torso_2_joint" class="reemc" />
+    <!-- head -->
+    <motor name="head_1_motor" joint="head_1_joint" class="reemc" />
+    <motor name="head_2_motor" joint="head_2_joint" class="reemc" />
+    <!-- right arm -->
+    <motor name="arm_right_1_motor" joint="arm_right_1_joint" class="reemc" />
+    <motor name="arm_right_2_motor" joint="arm_right_2_joint" class="reemc" />
+    <motor name="arm_right_3_motor" joint="arm_right_3_joint" class="reemc" />
+    <motor name="arm_right_4_motor" joint="arm_right_4_joint" class="reemc" />
+    <motor name="arm_right_5_motor" joint="arm_right_5_joint" class="reemc" />
+    <motor name="arm_right_6_motor" joint="arm_right_6_joint" class="reemc" />
+    <motor name="arm_right_7_motor" joint="arm_right_7_joint" class="reemc" />
+    <!-- left arm -->
+    <motor name="arm_left_1_motor" joint="arm_left_1_joint" class="reemc" />
+    <motor name="arm_left_2_motor" joint="arm_left_2_joint" class="reemc" />
+    <motor name="arm_left_3_motor" joint="arm_left_3_joint" class="reemc" />
+    <motor name="arm_left_4_motor" joint="arm_left_4_joint" class="reemc" />
+    <motor name="arm_left_5_motor" joint="arm_left_5_joint" class="reemc" />
+    <motor name="arm_left_6_motor" joint="arm_left_6_joint" class="reemc" />
+    <motor name="arm_left_7_motor" joint="arm_left_7_joint" class="reemc" />
+  </actuator> -->

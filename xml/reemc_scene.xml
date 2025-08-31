@@ -1,0 +1,52 @@
+<mujoco model="reemc position scene">
+
+    <include file="reemc_position.xml"/>
+
+    <visual>
+        <rgba haze="0.15 0.25 0.35 1"/>
+        <global azimuth="60" elevation="-20"/>
+        <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    </visual>
+
+    <asset>
+        <material name="MatPlane" reflectance="0.2" shininess="0.2" specular="1" texrepeat="5 5" texuniform="true"
+            texture="texplane"/>
+        <texture builtin="checker" height="100" name="texplane" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3"
+            markrgb="0.8 0.8 0.8" type="2d" width="200"/>
+        <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+    </asset>
+
+    <worldbody>
+        <geom name="floor" contype="0" conaffinity="0" pos="0 0 0" size="0 0 1" type="plane" material="MatPlane"/>
+        <light name="spotlight" mode="targetbody" target="base_link" pos="1 0 20"/>
+    </worldbody>
+
+    <contact>
+        <pair geom1="right_foot_collision" geom2="floor"/>
+        <pair geom1="left_foot_collision" geom2="floor"/>
+        <pair geom1="right_foot_collision" geom2="left_foot_collision"/>
+        <pair geom1="left_thigh_collision" geom2="right_thigh_collision"/>
+        <pair geom1="left_shank_collision" geom2="right_shank_collision"/>
+        <pair geom1="left_shank_collision" geom2="right_foot_collision"/>
+        <pair geom1="right_shank_collision" geom2="left_foot_collision"/>
+    </contact>
+
+      <keyframe>
+        <key name="home"
+        qpos="0 0 0.85
+                0.99 0 0.04 0 
+                0 0 -0.4 0.641 -0.318 0
+                0 0 -0.4 0.641 -0.318 0
+                0 0
+                0 0
+                -0.44 0.26 0 0.88 0 0 0
+                -0.44 0.26 0 0.88 0 0 0"
+        ctrl="0 0 -0.4 0.641 -0.318 0
+                0 0 -0.4 0.641 -0.318 0
+                0 0
+                0 0
+                -0.44 0.26 0 0.88 0 0 0
+                -0.44 0.26 0 0.88 0 0 0"/>
+                
+      </keyframe>
+</mujoco>
